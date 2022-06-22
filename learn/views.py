@@ -27,7 +27,6 @@ def lesson(request, lesson_id):
 
 def reading(request, lesson_id):
     lesson = Lessons.objects.get(pk=lesson_id)
-    title = 
     template = loader.get_template("learn/reading.html")
     context = {
         "lesson": lesson,
