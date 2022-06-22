@@ -1,0 +1,10 @@
+{% extends "learn/sample.html" %}
+
+{% block content %}
+    <ul>
+    {% for x in dictionary %}
+        <li>{{ x.word }} - {{ x.definition }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'reading' %}">BACK</a>
+{% endblock %}
