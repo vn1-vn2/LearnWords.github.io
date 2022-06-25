@@ -1,11 +1,11 @@
-{% extends "learn/sample.html" %}
+{% extends "sample.html" %}
 
 {% block content %}
     <h1>Welcome to LearnWords!</h1>
     <p>Please, choose the lesson</p>
     <ul>
     {% for x in lesson %}
-        <li><a href="{% url 'lesson' x.id %}">{{ x.title }}</a></li>
+        <li>{{ x.title }}</li>
     {% endfor %}
     </ul>
     <div></div>

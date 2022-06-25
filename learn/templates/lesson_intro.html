@@ -1,4 +1,4 @@
-{% extends "learn/sample.html" %}
+{% extends "sample.html" %}
 
 {% block content %}
     <h1>Welcome to Lesson {{ lesson.id }}</h1>
@@ -6,4 +6,4 @@
     <div></div>
     <a href="{% url 'index' %}">BACK</a>
     <a href="{% url 'reading' %}">NEXT</a>
-{% endblock %}
+{% end-block %}
