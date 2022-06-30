@@ -8,13 +8,15 @@ from .models import Lessons
 # Create your views here.
 def index(request):
     lesson = Lessons.objects.all().values()
-    template = loader.get_template("index.html")
+    template = loader.get_template("learn/index.html")
     context = {
         "lesson": lesson,
     }
     return HttpResponse(template.render(context, request))
 
-
+class Lesson:
+    def __init__(self):
+    
 #def lesson(request, lesson_id):
 #    lesson = Lessons.objects.get(pk=lesson_id)
 #    template = loader.get_template("learn/lesson.html")
