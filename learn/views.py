@@ -15,13 +15,13 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
     
-#def lesson(request, lesson_id):
-#    lesson = Lessons.objects.get(pk=lesson_id)
-#    template = loader.get_template("learn/lesson.html")
-#    context = {
-#        "lesson": lesson,
-#    }
-#    return HttpResponse(template.render(context, request))
+def lesson_intro(request, lesson_id):
+    lesson = Lessons.objects.get(pk=lesson_id)
+    template = loader.get_template("learn/lesson_intro.html")
+    context = {
+        "lesson": lesson,
+    }
+    return HttpResponse(template.render(context, request))
 
 
 #def reading(request, lesson_id):
