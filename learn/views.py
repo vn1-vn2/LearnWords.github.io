@@ -14,8 +14,6 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-class Lesson:
-    def __init__(self):
     
 #def lesson(request, lesson_id):
 #    lesson = Lessons.objects.get(pk=lesson_id)
