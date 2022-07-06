@@ -4,8 +4,8 @@
     <h1>Welcome to LearnWords!</h1>
     <p>Please, choose the lesson</p>
     <ul>
-    {% for x in lesson %}
-        <li><a href="url 'lesson.id'">{{ x.title }}</a></li>
+    {% for x in index %}
+        <li><a href="{% url 'intro' x.id %}">{{ x.title }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

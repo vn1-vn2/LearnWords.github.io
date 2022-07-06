@@ -1,0 +1,15 @@
+{% extends "learn/sample.html" %}
+
+{% block content %}
+    <h1>Welcome to Lesson {{ lesson.id }}</h1>
+    <p>In this lesson you will:</p>
+    <p>1) read and listen to a text "{{ lesson.title }}"</p>
+    <p>2) learn and understand following words:</p>
+    <ul>
+    {% for x in list %}
+        <li>{{ x.word }}</li>
+    {% endfor %}    
+    </ul>
+    <a href="{% url 'words' lesson.id %}">NEXT</a>
+    <p><a href="{% url 'index' %}">LIST OF LESSONS</a></p>
+{% endblock %}

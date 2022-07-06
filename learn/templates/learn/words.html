@@ -1,10 +1,12 @@
-{% extends "sample.html" %}
+{% extends "learn/sample.html" %}
 
 {% block content %}
-{% for x in lesson %}
-    <h1>{{ x.title }}</h1>
-    <div>{{ x.text }}</div>
-{% end-for %}
-    <a href="{% url 'lesson' x.id %}">BACK</a>
-    <a href="{% url 'exercise1' %}">NEXT</a>
-{% end-block %}
+<ul>
+{% for x in list %}
+    <li>{{ x.word }} - {{ x.definition }}</li>
+{% endfor %}
+</ul>
+    <a href="{% url 'intro' lesson.id %}">BACK</a>
+    <a href="{% url 'reading' lesson.id %}">NEXT</a>
+    <p><a href="{% url 'index' %}">LIST OF LESSONS</a></p>
+{% endblock %}
